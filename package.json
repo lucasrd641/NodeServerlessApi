@@ -1,0 +1,21 @@
+{
+  "name": "nodeserverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "serverless-bundle test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.811.0",
+    "serverless-bundle": "^4.1.0",
+    "serverless-dotenv-plugin": "^3.1.0",
+    "serverless-offline": "^6.8.0"
+  },
+  "dependencies": {
+    "serverless": "^2.15.0",
+    "uuid": "^7.0.3"
+  }
+}
