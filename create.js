@@ -39,7 +39,7 @@ export const main = handler(async (event, context) => {
 //     },
 //   };
 //   try {
-//     await dynamoDb.put(params).promise().then(console.log);
+//     await dynamoDb.put(params).promise();
 //     return {
 //       statusCode: 200,
 //       body: JSON.stringify(params.Item),
