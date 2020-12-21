@@ -90,6 +90,7 @@ functions:
       - http:
           path: billing
           method: post
+          cors: true
           authorizer: aws_iam
   delete:
     handler: delete.main
@@ -97,6 +98,7 @@ functions:
       - http:
           path: notes/{id}
           method: delete
+          cors: true
           authorizer: aws_iam
   update:
     handler: update.main
@@ -104,6 +106,7 @@ functions:
       - http:
           path: notes/{id}
           method: put
+          cors: true
           authorizer: aws_iam
   list:
     handler: list.main
@@ -111,6 +114,7 @@ functions:
       - http:
           path: notes
           method: get
+          cors: true
           authorizer: aws_iam
   get:
     handler: get.main
@@ -118,6 +122,7 @@ functions:
       - http:
           path: notes/{id}
           method: get
+          cors: true
           authorizer: aws_iam
   create:
     handler: create.main
@@ -125,7 +130,13 @@ functions:
       - http:
           path: notes
           method: post
+          cors: true
           authorizer: aws_iam
+
+# Create our resources with separate CloudFormation templates
+resources:
+  # API Gateway Errors
+  - ${file(resources/api-gateway-errors.yml)}
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
