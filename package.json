@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "serverless": "^2.15.0",
+    "stripe": "^8.129.0",
     "uuid": "^7.0.3"
   }
 }
